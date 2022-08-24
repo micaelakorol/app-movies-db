@@ -1,0 +1,9 @@
+ {data.filter((movie) => {
+       let filter = searchParams.get('filter') //se guarda lo que escribio el usuario
+         if(!filter) return true //noe scribio nada, retorna toda la lista
+            let title = movie.title.toLowerCase(); //si escribio, leemos lo que viene del input.
+               return title.startsWith(filter.toLocaleLowerCase()) //busco coincidencias con los title
+
+               //startsWith comparalo que se escribio en el input, con las peliculas existentes.
+               //SEGUIDO: MAPEAMOS 
+              }).map((movie,index) => (

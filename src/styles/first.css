@@ -1,0 +1,85 @@
+.carrusel{
+    width: 30%; 
+    cursor: pointer;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-img-top{
+  width: 85%;  
+  border-radius: 0.7rem;
+  margin:0.5rem 0;
+}
+
+.card-img-top:hover {
+  transition:all .5s ease-in;
+  background-color: var(--black);
+  transform: scaleY(1.04);
+  opacity: 0.5;
+}
+.section-img{
+    display: flex;
+    flex-direction: row;
+  width: 80%;
+  flex-wrap: wrap;
+margin: 0.4rem;  
+}
+
+.title{
+  color:var(--red);
+margin:1rem;
+display: flex;
+justify-content: center;
+align-items: center;
+height: auto;
+font-size: 2.2rem;
+}
+
+.info-first{
+  color:var(--red);
+display: flex;
+flex-direction: column;
+}
+.title-first{
+  margin: 0;
+}
+
+ figure{
+ opacity: 0;
+ position: relative;
+ bottom: -5rem;
+ padding: 4px;
+}
+
+.carrusel:hover figure{
+  opacity: 1;
+  z-index: 1;
+}
+
+@media (max-width:800px){
+  .carrusel{
+    width: 40%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .row{
+  width: 100%;
+  margin:0.4rem
+  }
+
+}
+@media (max-width:400px){
+  .carrusel{
+    width: 100%;
+    display: flex;
+    justify-content: inherit;
+    align-items: inherit;
+  }
+}
