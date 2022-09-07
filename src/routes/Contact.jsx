@@ -21,8 +21,9 @@ const Contact = () => {
         swal ( "Oops" ,  "Fields cannot be empty..." ,  "error" )
     }else{   
         swal("Good!", "We will contact you shortly!", "success");
-    setState(initialState)  
-    }}
+    }
+  setState(initialState)  
+  }
   /* ------- */
 
   const handleChange = (e) =>{
@@ -40,8 +41,8 @@ const Contact = () => {
 
 <form action="" onSubmit={handleSubmit}>
   <input type="text" name='names' placeholder='Jon Perez' autoComplete='off' onChange={handleChange}
-    />
-    <input type="email" name='email' placeholder='example@contact.com' autoComplete='off' onChange={handleChange} />
+   value={state.names}/>
+    <input type="email" name='email' placeholder='example@contact.com' autoComplete='off' onChange={handleChange} value={state.email} />
      <button className='btn-form'>Send</button>
        <Link to='/'> Back </Link>
          </form>
