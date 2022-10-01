@@ -20,8 +20,8 @@ if(error !== ''){
     <>
  <h2 className='title'>On the air!</h2>
   <div className='row'>
-    {data.map((movie) => (
-  <div className='carrusel'>
+    {data.map((movie,index) => (
+  <div className='carrusel' key={index}>
     <figure>
        <a href="https://www.themoviedb.org/tv/top-rated" target="_blank">
         <Avatar> <CallMadeIcon /> </Avatar> 
