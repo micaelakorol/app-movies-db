@@ -12,6 +12,7 @@ const Contact = () => {
   const navigate = useNavigate();
   //inicio db
   const db = getFirestore(app);
+
   const [state, setState] = useState(initialState);
   const { names, email } = state;
 
@@ -20,9 +21,8 @@ const Contact = () => {
     e.preventDefault();
     if (names === "" || email === "") {
       swal("Oops", "Fields cannot be empty...", "error");
-    }
-    //sending data
-    try {
+    }else{
+      try {
       await addDoc(collection(db, "usuarios"), {
         ...state,
       });
@@ -34,7 +34,8 @@ const Contact = () => {
     setTimeout(() => {
       navigate("/");
     }, 2000);
-  };
+    }
+  }
 
   /* ------- */
 
