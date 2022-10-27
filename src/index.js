@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
-import Contact from "./routes/functions/Contact";
-import Movies from "./routes/Movies";
-import First from "./routes/First";
-import Index from "./components/Index";
+import Movies from "./routes/Movies/Movies";
+import Contact from './routes/Contact/Contact'
+import First from "./routes/OnTheAir/First";
 import Error from "./routes/Error";
+import Index from "./routes/Index/Index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

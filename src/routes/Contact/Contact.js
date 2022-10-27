@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../functions/Contact.js";
+import "./Contact.js";
 import swal from "sweetalert";
 import { app } from "../../firebase/credentials";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { initialState } from "../initialValues/initialState";
-import ContactForm from "../ContactForm";
+import { initialState } from "../../initialValues/initialState";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -21,21 +21,21 @@ const Contact = () => {
     e.preventDefault();
     if (names === "" || email === "") {
       swal("Oops", "Fields cannot be empty...", "error");
-    }else{
+    } else {
       try {
-      await addDoc(collection(db, "usuarios"), {
-        ...state,
-      });
-      setState(initialState);
-      return swal("Thanks!", "Submitted form", "success");
-    } catch (error) {
-      alert(error);
+        await addDoc(collection(db, "usuarios"), {
+          ...state,
+        });
+        setState(initialState);
+        return swal("Thanks!", "Submitted form", "success");
+      } catch (error) {
+        alert(error);
+      }
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     }
-    setTimeout(() => {
-      navigate("/");
-    }, 2000);
-    }
-  }
+  };
 
   /* ------- */
 

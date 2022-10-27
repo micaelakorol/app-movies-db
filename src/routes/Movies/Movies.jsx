@@ -2,16 +2,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import { useFetch } from "../components/hooks/useFetch";
 import { Rating } from "@mui/material";
-import "../styles/movies.css";
-import { api_key } from "../api_key";
+import { useFetch } from "../../hooks/useFetch";
+import "../../styles/movies.css";
+import { api_key } from "../../api_key";
 const Movies = () => {
   let [searchParams, setSearchParams] = useSearchParams();
 
   const { data, error, loading } = useFetch(
     `https://api.themoviedb.org/3/movie/550/similar?api_key=${api_key}&`
   );
+
   if (loading) {
     return <h1 className="title">Loading...</h1>;
   }
@@ -51,8 +52,8 @@ const Movies = () => {
             let title = movie.title.toLowerCase();
             return title.startsWith(filter.toLocaleLowerCase());
           })
-          .map((movie, index) => (
-            <div className="carrusel-movies" key={index}>
+          .map((movie) => (
+            <div className="carrusel-movies" key={movie.id}>
               <section className="section-img-movies">
                 <img
                   src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}

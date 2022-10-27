@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/alt-text */
-import { useFetch } from "../components/hooks/useFetch";
-import "../styles/first.css";
+import { useFetch } from "../../hooks/useFetch";
+import "../../styles/first.css";
 import { Avatar, Rating } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";
-import { api_key } from "../api_key";
+import { api_key } from "../../api_key";
 const First = () => {
   //request: on the air:
 

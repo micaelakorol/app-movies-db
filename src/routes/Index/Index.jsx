@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "../styles/index.css";
-import { useFetch } from "./hooks/useFetch";
-import { api_key } from "../api_key";
+import "../../styles/index.css";
+import { useFetch } from "../../hooks/useFetch";
+import { api_key } from "../../api_key";
 const Index = () => {
+  
   const { data, error, loading } = useFetch(
     `https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}`
   );

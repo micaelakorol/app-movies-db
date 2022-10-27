@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/contact.css";
+import "../../styles/contact.css";
 
 const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
   return (
