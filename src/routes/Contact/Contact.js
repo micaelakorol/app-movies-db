@@ -26,7 +26,7 @@ const Contact = () => {
         await addDoc(collection(db, "usuarios"), {
           ...state,
         });
-        setState(initialState);
+        setState({...initialState});
         return swal("Thanks!", "Submitted form", "success");
       } catch (error) {
         alert(error);
