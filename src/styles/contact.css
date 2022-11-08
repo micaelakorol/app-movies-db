@@ -22,6 +22,7 @@
 }
 
 .form-contact input {
+  text-transform: lowercase;
   width: 31.2rem;
   height: 4.3rem;
   margin: 0.8rem;
