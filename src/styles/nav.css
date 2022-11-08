@@ -2,7 +2,6 @@
   width: 100%;
 }
 
-
 .nav {
   display: flex;
   flex-direction: row;
@@ -11,13 +10,14 @@
   gap: 1rem;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--black);
 }
 
 nav a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
-  color: rgb(158, 157, 157);
+  color: var(--white);
   letter-spacing: 1px;
 }
 
