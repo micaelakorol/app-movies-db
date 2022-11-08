@@ -1,7 +1,7 @@
 .container-nav {
   width: 100%;
-  text-transform: uppercase;
 }
+
 
 .nav {
   display: flex;
@@ -17,7 +17,7 @@ nav a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--lightRed);
+  color: rgb(158, 157, 157);
   letter-spacing: 1px;
 }
 

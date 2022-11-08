@@ -16,7 +16,6 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
             type="text"
             name="names"
             placeholder="Jon Perez"
-            autoComplete="off"
             onChange={handleChange}
             value={names}
           />
@@ -24,11 +23,10 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
             type="email"
             name="email"
             placeholder="example@contact.com"
-            autoComplete="off"
             onChange={handleChange}
             value={email}
           />
-          <button className="btn-form">Send</button>
+          <button type="submit" className="btn-form">Send</button>
           <Link to="/"> Back </Link>
         </form>
       </div>
