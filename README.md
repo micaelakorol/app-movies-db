@@ -11,3 +11,6 @@ React Helmet, sweetAlert,MaterialUI
 
 API: 
 https://www.themoviedb.org/
+
+Deploy: 
+https://app-movies-db.netlify.app/

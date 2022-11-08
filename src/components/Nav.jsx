@@ -9,7 +9,7 @@ const Nav = ({ theme, setTheme }) => {
       <nav className="nav">
         <NavLink to={"/"}>
           <img
-            src={require("../images/logo2.png")}
+            src={require("../images/logo.png")}
             alt=""
             className="logo-movie"
           />{" "}

@@ -28,7 +28,7 @@
     padding: 1rem;
     border:2px solid var(--red);
     outline: none;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .form-contact input:focus{
