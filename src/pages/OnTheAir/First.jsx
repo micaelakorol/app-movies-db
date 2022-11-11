@@ -34,7 +34,9 @@ const First = () => {
               </a>
             </figure>
             <img
-              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/original${
+                movie.poster_path ? movie.poster_path : "image not available"
+              }`}
               className="card-img-top"
             />
             {/* name movie and opinions */}

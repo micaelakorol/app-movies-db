@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import "../../styles/index.css";
-import { useFetch } from "../../hooks/useFetch";
 import { api_key } from "../../api_key";
+import { useFetch } from "../../hooks/useFetch";
+import '../../styles/index.css'
 const Index = () => {
   
   const { data, error, loading } = useFetch(

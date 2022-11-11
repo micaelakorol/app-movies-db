@@ -26,7 +26,7 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
             onChange={handleChange}
             value={email}
           />
-          <button type="submit" className="btn-form">Send</button>
+          <button type="submit" className="btn-form" >Send</button>
           <Link to="/"> Back </Link>
         </form>
       </div>

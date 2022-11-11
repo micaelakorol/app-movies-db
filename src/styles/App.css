@@ -5,6 +5,7 @@
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   box-sizing: border-box;
+  transition: all 1s;
 }
 
 html body {
