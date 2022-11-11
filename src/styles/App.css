@@ -5,7 +5,6 @@
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   box-sizing: border-box;
-  transition: all 1s;
 }
 
 html body {
@@ -42,8 +41,10 @@ a {
 .dark {
   background-color: var(--background-dark);
   color: var(--white);
+  transition: all 1s;
 }
 .light {
   background-color: var(--white);
   color: var(--background-dark);
+  transition: all 1s;
 }

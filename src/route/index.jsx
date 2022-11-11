@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {
-                errorElement: <Error />, //para no perder el layoutPublic
+                errorElement: <Error />,
                 children: [
                     {
                         index: true,
@@ -30,6 +30,10 @@ export const router = createBrowserRouter([
                     {
                         path: "/contact",
                         element: <Contact />,
+                    },
+                    {
+                        path: "*",
+                        element: <Error />,
                     },
                 ],
             },
