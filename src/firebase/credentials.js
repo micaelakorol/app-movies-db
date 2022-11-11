@@ -1,13 +1,12 @@
 import { initializeApp } from "firebase/app";
-import { apiKey, appId, auth, messagingSenderId, proyectId, storageBucket } from "../api_key";
 
 const credentials = {
-  apiKey: apiKey,
-  authDomain: auth,
-  projectId: proyectId,
-  storageBucket: storageBucket,
-  messagingSenderId: messagingSenderId,
-  appId: appId
+  apiKey:process.env.REACT_APP_API_KEY,
+  authDomain:process.env.REACT_APP_AUTH_DOMAIN,
+  projectId:process.env.REACT_APP_PROJECT_ID,
+  storageBucket:process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId:process.env.REACT_APP_MESSAGING_ID,
+  appId:process.env.REACT_APP_APP_ID
 };
 
 export const app = initializeApp(credentials);
