@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/alt-text */
 import { useFetch } from "../../hooks/useFetch";
-import "../../styles/first.css";
+import "../../styles/moreViews.css"
 import { Avatar, Rating } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";
 import { api_key } from "../../api_key";
@@ -12,16 +12,13 @@ const First = () => {
     `https://api.themoviedb.org/3/tv/on_the_air?api_key=${api_key}&language=en-US&page=1`
   );
 
-  if (loading) {
-    return <h1 className="title">Loading...</h1>;
-  }
-  if (error !== "") {
-    return <h1 className="title">{error}</h1>;
-  }
+  if (loading)
+    return <h1 className="title">Loading...</h1>
+  if (error !== "") return <h1 className="title">{error}</h1>;
 
   return (
     <>
-      <h2 className="title">On the air!</h2>
+      <h2 className="title">In the top #1 </h2>
       <div className="row">
         {data.map((movie, index) => (
           <div className="carrusel" key={index}>

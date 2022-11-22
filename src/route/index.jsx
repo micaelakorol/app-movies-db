@@ -4,7 +4,7 @@ import Contact from "../pages/Contact/Contact";
 import Error from "../pages/Error";
 import Index from "../pages/Index/Index";
 import Movies from "../pages/Movies/Movies";
-import First from "../pages/OnTheAir/First";
+import MoreViews from "../pages/MoreViews/MoreViews";
 //Route configuration:
 export const router = createBrowserRouter([
     {
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
                     },
                     {
                         path: "/top",
-                        element: <First />,
+                        element: <MoreViews />,
                     },
                     {
                         path: "/movies",

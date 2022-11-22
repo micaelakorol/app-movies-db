@@ -13,12 +13,8 @@ const Movies = () => {
     `https://api.themoviedb.org/3/movie/550/similar?api_key=${api_key}&`
   );
 
-  if (loading) {
-    return <h1 className="title">Loading...</h1>;
-  }
-  if (error !== "") {
-    return <h1 className="title">{error}</h1>;
-  }
+  if (loading) return <h1 className="title">Loading...</h1>;
+  if (error !== "") return <h1 className="title">{error}</h1>;
 
   const handleChange = (e) => {
     let filter = e.target.value;
@@ -26,8 +22,7 @@ const Movies = () => {
       setSearchParams({ filter });
     } else {
       setSearchParams({});
-    }
-  };
+    }};
 
   return (
     <>

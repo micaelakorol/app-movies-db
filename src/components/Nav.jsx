@@ -14,7 +14,7 @@ const Nav = ({ theme, setTheme }) => {
             className="logo-movie"
           />{" "}
         </NavLink>
-        <NavLink to={"/top"}>On the air</NavLink>
+        <NavLink to={"/top"}>More Views</NavLink>
         <NavLink to={"/movies"}>Movies</NavLink>
         <NavLink to={"/contact"}>Contact</NavLink>
 

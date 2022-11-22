@@ -9,12 +9,8 @@ const Index = () => {
   const { data, error, loading } = useFetch(
     `https://api.themoviedb.org/3/trending/all/day?api_key=${api_key}`
   );
-  if (loading) {
-    return <h1 className="title">Loading...</h1>;
-  }
-  if (error !== "") {
-    return <h1 className="title">{error}</h1>;
-  }
+  if (loading) return <h1 className="title">Loading...</h1>
+  if (error !== "") return <h1 className="title">{error}</h1>
 
   return (
     <>
