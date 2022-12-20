@@ -27,7 +27,7 @@ const Movies = () => {
   return (
     <>
       {/* searcher of movies */}
-      <form action="" className="form-movies">
+      <form action="" method="post" className="form-movies">
         <input
           type="text"
           placeholder="Search"

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className={theme ? "light" : "dark"}>
       <Nav theme={theme} setTheme={setTheme} />
-      <Outlet />
+      <Outlet theme={theme} setTheme={setTheme}/>
     </div>
   );
 };

@@ -9,7 +9,6 @@ import { initialState } from "../../initialValues/initialState";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
-
   const navigate = useNavigate();
   //initiation db
   const db = getFirestore(app);

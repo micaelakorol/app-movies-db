@@ -34,6 +34,7 @@ const First = () => {
               src={`https://image.tmdb.org/t/p/original${
                 movie.poster_path ? movie.poster_path : "image not available"
               }`}
+              alt='poster movie'
               className="card-img-top"
             />
             {/* name movie and opinions */}

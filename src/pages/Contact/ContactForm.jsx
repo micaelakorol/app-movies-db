@@ -18,6 +18,8 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
             placeholder="Jon Perez"
             onChange={handleChange}
             value={names}
+            required
+            aria-required='true'
           />
           <input
             type="email"
@@ -25,6 +27,8 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
             placeholder="example@contact.com"
             onChange={handleChange}
             value={email}
+            required
+            aria-required='true'
           />
           <button type="submit" className="btn-form" >Send</button>
           <Link to="/"> Back </Link>

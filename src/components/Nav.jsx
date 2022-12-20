@@ -5,12 +5,12 @@ import "../styles/nav.css";
 
 const Nav = ({ theme, setTheme }) => {
   return (
-    <div className="container-nav">
-      <nav className="nav">
+    <nav className="container-nav">
+      <div className="nav">
         <NavLink to={"/"}>
           <img
             src={require("../images/logo.png")}
-            alt=""
+            alt="logo Movie Flix"
             className="logo-movie"
           />{" "}
         </NavLink>
@@ -23,8 +23,8 @@ const Nav = ({ theme, setTheme }) => {
           defaultChecked
           color="default"
         />
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 
