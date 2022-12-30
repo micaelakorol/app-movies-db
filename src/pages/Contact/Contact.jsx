@@ -19,28 +19,33 @@ const Contact = () => {
   /* Validations + sending data to bbdd */
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (names === "" || email === "") return swal("Oops", "Fields cannot be empty...", "error");
-   else {
+    if (names === "" || email === "")
+      return swal("Oops", "Fields cannot be empty...", "error");
+    else {
       try {
         await addDoc(collection(db, "usuarios"), {
           name: names,
-          email: email
+          email: email,
         });
         setState(initialState);
         return swal("Thanks!", "Submitted form", "success");
       } catch (error) {
-        alert(error)
-    }  
+        alert(error);
+      }
       setTimeout(() => {
         navigate("/");
-      }, 2000);}};
+      }, 2000);
+    }
+  };
 
   /* ------- */
   const handleChange = (e) => {
     setState((old) => ({
       ...old,
       [e.target.name]: e.target.value,
-    }))};
+    }));
+  };
+
   return (
     <div className="contact">
       <ContactForm

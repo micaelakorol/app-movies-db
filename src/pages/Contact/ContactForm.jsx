@@ -30,7 +30,7 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
             required
             aria-required='true'
           />
-          <button type="submit" className="btn-form" >Send</button>
+          <button type="submit" className="btn-form">Send</button>
           <Link to="/"> Back </Link>
         </form>
       </div>
