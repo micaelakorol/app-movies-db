@@ -5,7 +5,7 @@ import "../../styles/contact.css";
 const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
   return (
     <>
-      <div className="form-contact">
+      <article className="form-contact">
         <section className="title-contact">
           <h2>Do you have any doubt? </h2>
           <h4>Contact us!</h4>
@@ -33,7 +33,7 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
           <button type="submit" className="btn-form">Send</button>
           <Link to="/"> Back </Link>
         </form>
-      </div>
+      </article>
     </>
   );
 };

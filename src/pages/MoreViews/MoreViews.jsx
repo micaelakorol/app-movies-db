@@ -19,9 +19,9 @@ const First = () => {
   return (
     <>
       <h2 className="title">In the top #1 </h2>
-      <div className="row">
+      <main>
         {data.map((movie, index) => (
-          <div className="carrusel" key={index}>
+          <section className="inTheTop" key={index}>
             <figure>
               <a href="https://www.themoviedb.org/tv/top-rated" target="_blank">
                 <Avatar>
@@ -39,8 +39,8 @@ const First = () => {
             />
             {/* name movie and opinions */}
 
-            <section className="info-first">
-              <p className="title-first">{movie.original_name}</p>
+            <section className="title-movie">
+              <p className="punctuation">{movie.original_name}</p>
               <Rating
                 name="size-small"
                 size="small"
@@ -50,9 +50,9 @@ const First = () => {
                 value={movie.vote_average}
               />
             </section>
-          </div>
+          </section>
         ))}
-      </div>
+      </main>
     </>
   );
 };

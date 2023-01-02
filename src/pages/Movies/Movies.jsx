@@ -6,6 +6,7 @@ import { Rating } from "@mui/material";
 import { useFetch } from "../../hooks/useFetch";
 import "../../styles/movies.css";
 import { api_key } from "../../api_key";
+import Search from "./Search";
 const Movies = () => {
   let [searchParams, setSearchParams] = useSearchParams();
 
@@ -35,10 +36,10 @@ const Movies = () => {
           onChange={handleChange}
         />
         <button type="search" className="btn-form">
-          Search
+          <Search />
         </button>
       </form>
-      <div className="row">
+      <main>
         {data
           .filter((movie) => {
             let filter = searchParams.get("filter");
@@ -48,14 +49,14 @@ const Movies = () => {
             return title.startsWith(filter.toLocaleLowerCase());
           })
           .map((movie) => (
-            <div className="carrusel-movies" key={movie.id}>
+            <article key={movie.id}>
               <section className="section-img-movies">
                 <img
                   src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                   className="card-img-top"
                 />
 
-                <div className="description-movies">
+                <section className="description-movies">
                   <Rating
                     name="size-small"
                     defaultValue={2}
@@ -65,14 +66,14 @@ const Movies = () => {
                     size="small"
                   />
                   <b>{movie.release_date}</b>
-                </div>
+                </section>
                 <a href="https://www.themoviedb.org/movie" target="_blank">
                   <h1 className="title-movies">{movie.title}</h1>
                 </a>
               </section>
-            </div>
+            </article>
           ))}
-      </div>
+      </main>
     </>
   );
 };

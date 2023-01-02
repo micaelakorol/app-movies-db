@@ -5,8 +5,8 @@ import "../styles/nav.css";
 
 const Nav = ({ theme, setTheme }) => {
   return (
-    <nav className="container-nav">
-      <div className="nav">
+    <header>
+      <nav>
         <NavLink to={"/"}>
           <img
             src={require("../images/logo.png")}
@@ -23,8 +23,8 @@ const Nav = ({ theme, setTheme }) => {
           defaultChecked
           color="default"
         />
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

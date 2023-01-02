@@ -7,7 +7,6 @@
   font-size: 1.8rem;
   margin: 2rem;
   text-align: center;
-  color: var(--red);
 }
 
 .title-contact h4 {
@@ -22,22 +21,27 @@
 }
 
 .form-contact input {
-  text-transform: lowercase;
   width: 31.2rem;
   height: 4.3rem;
   margin: 0.8rem;
   padding: 1rem;
-  border: 2px solid var(--red);
+  border: 2.5px solid var(--red);
+  border-radius: .5rem;
+  color: gray;
   outline: none;
   background-color: var(--white);
 }
 
 .form-contact input:focus {
-  border: 2px solid var(--red);
+  border: 2px dashed salmon;
 }
 .form-contact a {
   color: var(--red);
   margin: 1rem;
+}
+
+::placeholder{
+  text-transform: uppercase;
 }
 
 @media (max-width: 600px) {

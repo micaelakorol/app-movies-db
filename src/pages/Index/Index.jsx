@@ -14,10 +14,10 @@ const Index = () => {
 
   return (
     <>
-      <main className="row">
-        <h1 className="title">TRENDING</h1>
+      <h1 className="title">Recommended</h1>
+      <main>
         {data.map((movie) => (
-          <div className="carrusel-movies-index" key={movie.id}>
+          <article className="carrusel-movies-index" key={movie.id}>
             <section className="section-img-movies">
               <img
                 src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
@@ -32,10 +32,9 @@ const Index = () => {
                 Watch now
               </a>
             </section>
-          </div>
+          </article>
         ))}
-      </main>
-    </>
+      </main></>
   );
 };
 

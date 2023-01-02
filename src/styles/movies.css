@@ -1,27 +1,4 @@
-.carrusel-movies {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.row {
-  margin: 0.2rem;
-}
-
-.section-img-movies {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  gap: 0;
-  margin-top: 0.5rem;
-  border-radius: 0.7rem;
-}
-
 .title-movies {
-  font-weight: 400;
   background-color: var(--red);
   color: var(--white);
   border-radius: 0.4rem;
@@ -38,47 +15,15 @@
   transition: all 0.5s;
 }
 
-.form-movies {
-  width: 100%;
-  height: auto;
+.section-img-movies {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-.form-movies input {
-  width: 30%;
-  margin: 1rem 0;
-  height: 2.5rem;
-  padding: 0.5rem;
-  outline: none;
-  background-color: var(--white);
-  border: 2px solid var(--red);
-}
-
-::placeholder {
-  font-size: 0.8rem;
-}
-
-.btn-form {
-  height: 2.5rem;
-  width: 8.1rem;
-  background-color: var(--red);
-  border: none;
-  border-radius: 0.5rem;
-  color: white;
-  font-weight: 500;
-  font-size: 0.8rem;
+  width: 75%;
+  gap: 0;
+  margin-top: 0.5rem;
+  border-radius: 0.7rem;
   cursor: pointer;
-  text-transform: uppercase;
-}
-
-.btn-form:hover {
-  opacity: 0.8;
-}
-
-.form-movies input:hover {
-  border: 2px solid var(--red);
 }
 
 .description-movies {
@@ -87,40 +32,72 @@
   min-height: 50px;
   width: auto;
   text-align: center;
-  color: var(--red);
+  color: salmon;
   margin: 0.4rem;
 }
 .description-movies b {
   text-align: start;
 }
 
+
+/*FORM INPUT SEARCH */
+.form-movies {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.form-movies input {
+  width: 30%;
+  margin: 1rem 0;
+  height: 2.4rem;
+  padding: 0.5rem;
+  outline: none;
+  background-color: var(--white);
+  border: none;
+}
+
+::placeholder {
+  font-size: 0.8rem;
+}
+
+.btn-form {
+  padding: .5rem .8rem;
+  background-color: var(--red);
+  border: none;
+  border-radius: 0.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+}
+
+.btn-form:hover {
+  background-color: salmon;
+}
+
+.form-movies input:hover {
+  border: 2px dashed salmon;
+}
+
+
 @media (max-width: 600px) {
-  .carrusel-movies {
-    width: 40%;
-  }
   .title-movies {
     font-size: 0.8rem;
     margin: 1rem 0.3rem;
   }
-  .form-movies {
-    display: flex;
-    flex-direction: column;
-  }
   .form-movies input {
     width: 50%;
-    margin: 0.8rem 0;
-    height: 2rem;
+    margin: 0.2rem 0;
   }
   .btn-form {
-    height: 2rem;
-    border-radius: 0.5rem;
-    width: 6rem;
+    padding: .5rem;
+  }
+  .section-img-movies{
+    width: 100%;
   }
 }
 @media (max-width: 300px) {
-  .carrusel-movies {
-    width: 100%;
-  }
   .form-movies input {
     width: 90%;
   }
