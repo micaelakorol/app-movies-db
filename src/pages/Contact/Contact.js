@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Contact.jsx";
+import "./Contact.js";
 import swal from "sweetalert";
-import { app } from "../../firebase/credentials";
+import { app } from "../../firebase/credentials.js";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { initialState } from "../../initialValues/initialState";
-import ContactForm from "./ContactForm";
+import { initialState } from "../../initialValues/initialState.js";
+import ContactForm from "./ContactForm.jsx";
 
 const Contact = () => {
   const navigate = useNavigate();

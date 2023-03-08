@@ -14,7 +14,7 @@ const Index = () => {
 
   return (
     <>
-      <h1 className="title">Recommended</h1>
+      <h1 className="title">Recommended for you</h1>
       <main>
         {data.map((movie) => (
           <article className="carrusel-movies-index" key={movie.id}>

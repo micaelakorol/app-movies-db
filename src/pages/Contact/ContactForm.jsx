@@ -8,7 +8,7 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
       <article className="form-contact">
         <section className="title-contact">
           <h2>Do you have any doubt? </h2>
-          <h4>Contact us!</h4>
+          <p>Contact us!</p>
         </section>
 
         <form action="" onSubmit={handleSubmit} method="post">
