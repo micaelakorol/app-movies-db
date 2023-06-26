@@ -1,0 +1,64 @@
+.contact {
+  height: 100%;
+  height: 100vh;
+}
+
+.title-contact {
+  font-size: 1.8rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.title-contact p {
+  margin-top: 1rem;
+}
+
+.form-contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-contact input {
+  width: 35%;
+  margin: 0.8rem;
+  padding:.8rem;
+  border: 1.5px solid var(--red);
+  border-radius: .5rem;
+  color: gray;
+  outline: none;
+  background-color: var(--white);
+}
+
+.form-contact input:focus {
+  border: 2px dashed salmon;
+}
+.form-contact a {
+  color: var(--red);
+  margin: 1rem;
+}
+
+::placeholder{
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .title-contact {
+    font-size: 1.4rem;
+  }
+  .form-contact input {
+    max-width: 17.5rem;
+    height: 3.1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .form-contact input {
+    max-width: 12.5rem;
+    border-radius: 0.5rem;
+  }
+  .title-contact {
+    font-size: 1rem;
+  }
+}
