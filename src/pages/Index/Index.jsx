@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable jsx-a11y/alt-text */
-import React from "react";
 import { useFetch } from "../../hooks/useFetch";
 import "../../styles/index.css";
 const Index = () => {
@@ -25,6 +22,7 @@ const Index = () => {
               <a
                 href="https://www.themoviedb.org/"
                 target="_blank"
+                rel="noreferrer"
                 className="ancla-btn"
               >
                 Watch now
