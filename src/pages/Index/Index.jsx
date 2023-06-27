@@ -6,7 +6,7 @@ const Index = () => {
   const { data, error, loading } = useFetch(url);
   if (loading) return <h1 className="title">Loading...</h1>;
   if (error !== "") return <h1 className="title">{error}</h1>;
-
+// git pull origin main --allow-unrelated-histories
   return (
     <>
       <h1 className="title">Recommended for you</h1>
