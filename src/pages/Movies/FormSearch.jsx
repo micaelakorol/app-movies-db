@@ -6,14 +6,14 @@ import { useFetch } from "../../hooks/useFetch";
 import "../../styles/movies.css";
 import Search from "./svg/Search";
 import SearchMovies from "./SearchMovies";
+import useLoading from "../../hooks/useLoading";
 const Movies = () => {
   let [searchParams, setSearchParams] = useSearchParams();
   const apiKey = process.env.REACT_APP_THEMOVIEDB_API_KEY;
   const url = `https://api.themoviedb.org/3/movie/550/similar?api_key=${apiKey}`;
   
   const { data, error, loading } = useFetch(url);
-  if (loading) return <h1 className="title">Loading...</h1>;
-  if (error !== "") return <h1 className="title">{error}</h1>;
+  const {LoadingErrorComponent} = useLoading(loading, error)
 
   const handleChange = (e) => {
     let filter = e.target.value;
@@ -27,14 +27,16 @@ const Movies = () => {
   return (
     <>
       {/* searcher of movies */}
+      { LoadingErrorComponent()}
       <form action="" method="post" className="form-movies">
         <input
           type="text"
           placeholder="Search"
           value={searchParams.get("filter") || ""}
           onChange={handleChange}
+          aria-label="Search"
         />
-        <button type="search" className="btn-form">
+        <button type="search" role="search" className="btn-form">
           <Search />
         </button>
       </form>

@@ -5,7 +5,12 @@ const MovieImage = ({ movie }) => {
   return (
     <>
       <figure>
-        <a href="https://www.themoviedb.org/tv/top-rated" target="_blank" rel="noreferrer"> 
+        <a
+          href="https://www.themoviedb.org/tv/top-rated"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Watch movie "
+        >
           <Avatar>
             {" "}
             <CallMadeIcon />{" "}

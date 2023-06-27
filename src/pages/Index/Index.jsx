@@ -24,6 +24,7 @@ const Index = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="ancla-btn"
+                aria-label="Watch movie now"
               >
                 Watch now
               </a>
