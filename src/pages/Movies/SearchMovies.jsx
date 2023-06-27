@@ -1,5 +1,6 @@
 import { Rating } from "@mui/material";
 import React from "react";
+import { ExternalLink } from "../../reusable/ExternalLink";
 
 const SearchMovies = ({ data, searchParams }) => {
   return (
@@ -32,14 +33,12 @@ const SearchMovies = ({ data, searchParams }) => {
                 />
                 <b>{movie.release_date}</b>
               </section>
-              <a
+              <ExternalLink
                 href="https://www.themoviedb.org/movie"
-                target="_blank"
-                rel="noreferrer"
                 aria-label="Watch movie now"
               >
                 <h1 className="title-movies">{movie.title}</h1>
-              </a>
+              </ExternalLink>
             </section>
           </article>
         ))}

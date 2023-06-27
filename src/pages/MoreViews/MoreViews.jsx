@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable jsx-a11y/alt-text */
 import { useFetch } from "../../hooks/useFetch";
 import "../../styles/moreViews.css";
 import MovieOpinions from "./MovieOpinions";

@@ -1,21 +1,20 @@
 import React from "react";
 import { Avatar } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";
+import { ExternalLink } from "../../reusable/ExternalLink";
 const MovieImage = ({ movie }) => {
   return (
     <>
       <figure>
-        <a
+        <ExternalLink
           href="https://www.themoviedb.org/tv/top-rated"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Watch movie "
+          aria-label="Watch movie"
         >
           <Avatar>
             {" "}
             <CallMadeIcon />{" "}
           </Avatar>
-        </a>
+        </ExternalLink>
       </figure>
       <img
         src={`https://image.tmdb.org/t/p/original${
