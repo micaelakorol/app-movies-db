@@ -6,9 +6,9 @@ import MovieOpinions from "./MovieOpinions";
 import MovieImage from "./MovieImage";
 const First = () => {
   //request: on the air:
-  const { data, error, loading } = useFetch(
-    `https://api.themoviedb.org/3/tv/on_the_air?api_key=8454c602449d47e0148712ac77b8f00e&language=en-US&page=1`
-  );
+  const apiKey = process.env.REACT_APP_THEMOVIEDB_API_KEY;
+  const url = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${apiKey}&language=en-US&page=1`;
+  const { data, error, loading } = useFetch(url);
 
   if (loading) return <h1 className="title">Loading...</h1>;
   if (error !== "") return <h1 className="title">{error}</h1>;

@@ -4,9 +4,9 @@ import React from "react";
 import { useFetch } from "../../hooks/useFetch";
 import "../../styles/index.css";
 const Index = () => {
-  const { data, error, loading } = useFetch(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=8454c602449d47e0148712ac77b8f00e`
-  );
+  const apiKey = process.env.REACT_APP_THEMOVIEDB_API_KEY;
+  const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`;
+  const { data, error, loading } = useFetch(url);
   if (loading) return <h1 className="title">Loading...</h1>;
   if (error !== "") return <h1 className="title">{error}</h1>;
 

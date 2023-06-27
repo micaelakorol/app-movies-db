@@ -8,9 +8,10 @@ import Search from "./svg/Search";
 import SearchMovies from "./SearchMovies";
 const Movies = () => {
   let [searchParams, setSearchParams] = useSearchParams();
-  const { data, error, loading } = useFetch(
-    `https://api.themoviedb.org/3/movie/550/similar?api_key=8454c602449d47e0148712ac77b8f00e&`
-  );
+  const apiKey = process.env.REACT_APP_THEMOVIEDB_API_KEY;
+  const url = `https://api.themoviedb.org/3/movie/550/similar?api_key=${apiKey}`;
+  
+  const { data, error, loading } = useFetch(url);
   if (loading) return <h1 className="title">Loading...</h1>;
   if (error !== "") return <h1 className="title">{error}</h1>;
 
