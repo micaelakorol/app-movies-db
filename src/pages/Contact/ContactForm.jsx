@@ -14,24 +14,28 @@ const ContactForm = ({ handleSubmit, handleChange, names, email }) => {
         </section>
 
         <form action="" onSubmit={handleSubmit} method="post">
-          <input
-            type="text"
-            name="names"
-            placeholder="Jon Perez"
-            onChange={handleChange}
-            value={names}
-            required
-            aria-required="true"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="example@contact.com"
-            onChange={handleChange}
-            value={email}
-            required
-            aria-required="true"
-          />
+          <label htmlFor="names">
+            <input
+              type="text"
+              name="names"
+              placeholder="Jon Perez"
+              onChange={handleChange}
+              value={names}
+              required
+              aria-required="true"
+            />
+          </label>
+          <label htmlFor="email">
+            <input
+              type="email"
+              name="email"
+              placeholder="example@contact.com"
+              onChange={handleChange}
+              value={email}
+              required
+              aria-required="true"
+            />
+          </label>
           <button type="submit" className="btn-form">
             Send
           </button>
