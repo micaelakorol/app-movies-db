@@ -13,7 +13,7 @@ const SendMessage = (fieldEmail, setFieldEmail) => {
     if (!yourName || !email || !message) return swal("Oops", "Fields cannot be empty...", "error");
     else {
       try {
-        await addDoc(collection(db, "usuarios"), {
+        await addDoc(collection(db, "user_queries"), {
           name: yourName,
           email: email,
           message: message,
@@ -22,6 +22,7 @@ const SendMessage = (fieldEmail, setFieldEmail) => {
         return swal("Thanks!", "Submitted form", "success");
       } catch (error) {
         alert(error);
+        
       }
     }
   };
