@@ -1,6 +1,6 @@
 import "../../styles/moreViews.css";
-import MovieOpinions from "./MovieOpinions";
-import MovieImage from "./MovieImage";
+import MovieOpinions from "./Elements/MovieOpinions";
+import MovieImage from "./Elements/MovieImage";
 import { useFetch } from "../../services/hooks/useFetch";
 const First = () => {
   //request: on the air:

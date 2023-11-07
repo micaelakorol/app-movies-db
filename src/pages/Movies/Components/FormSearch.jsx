@@ -15,11 +15,10 @@ const Movies = () => {
       <form action="" method="post" className="form-movies">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Today I want to see..."
           value={searchParams.get("filter") || ""}
           onChange={handleChangeParams}
-          aria-label="Search"
-          autoFocus
+          required
         />
         <SearchButton />
       </form>

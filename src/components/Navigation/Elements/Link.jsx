@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { logo } from "../variables";
+import { logo } from "../../variables";
 
 const Link = () => {
   return (
