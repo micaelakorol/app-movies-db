@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla', sans-serif;
+  box-sizing: border-box;
+}
+
+html body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+:root {
+  --white: #fff;
+  --red: #e50914;
+  --lightRed: rgb(247, 74, 43);
+  --black: rgb(23, 22, 22);
+  --background-dark: rgb(34, 34, 34);
+}
+
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.dark {
+  background-color: var(--background-dark);
+  color: var(--white);
+  transition: all 1s;
+}
+.light {
+  background-color: var(--white);
+  color: var(--background-dark);
+  transition: all 1s;
+}
