@@ -28,7 +28,7 @@ main {
 }
 .ancla-btn:hover {
   opacity: 0.4;
-  color: black;
+  color: var(--black);
 }
 
 @media (max-width: 1024px) {

@@ -21,8 +21,7 @@ const SendMessage = (fieldEmail, setFieldEmail) => {
         setFieldEmail(fields);
         return swal("Thanks!", "Submitted form", "success");
       } catch (error) {
-        alert(error);
-        
+        alert(error); 
       }
     }
   };

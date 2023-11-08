@@ -32,7 +32,7 @@
   min-height: 50px;
   width: auto;
   text-align: center;
-  color: salmon;
+  color: var(--description);
   margin: 0.4rem;
 }
 .description-movies b {
@@ -53,7 +53,7 @@
   padding: 0.5rem;
   outline: none;
   background-color: var(--white);
-  border: none;
+  border: .5px solid var(--border);
 }
 
 ::placeholder {
@@ -68,7 +68,7 @@
   font-weight: 500;
   cursor: pointer;
   text-transform: uppercase;
-  color: white;
+  color: var(--white);
 }
 
 .btn-form img {

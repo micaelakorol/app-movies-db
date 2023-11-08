@@ -4,7 +4,6 @@ import { useRouteError } from "react-router-dom";
 
 const Error = () => {
   let error = useRouteError();
-  console.error(error);
   return (
     <section
       className="title error"

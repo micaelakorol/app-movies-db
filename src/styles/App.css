@@ -14,7 +14,9 @@ html body {
 
 :root {
   --white: #fff;
+  --border: rgb(176, 173, 173);
   --red: #e50914;
+  --description:rgb(209, 33, 13);
   --lightRed: rgb(247, 74, 43);
   --black: rgb(23, 22, 22);
   --background-dark: rgb(34, 34, 34);

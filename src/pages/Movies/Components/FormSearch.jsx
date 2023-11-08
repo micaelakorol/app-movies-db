@@ -3,15 +3,15 @@ import SearchMovies from "./SearchMovies";
 import SearchButton from "../Elements/SearchButton";
 import HandleParams from "../Functions/HandleParams";
 import { useFetch } from "../../../services/hooks/useFetch";
+import Loading from "../../../components/Loading/Loading";
 const Movies = () => {
-  
-  const apiKey = '7dab491b5d6e1c3441e02781d5188f18'
+  const apiKey = process.env.REACT_APP_API_THEMOVIEDB;
   const url = `https://api.themoviedb.org/3/movie/550/similar?api_key=${apiKey}`;
-  const { data} = useFetch(url);
-  const{ handleChangeParams, searchParams} = HandleParams()
-
+  const { data } = useFetch(url);
+  const { handleChangeParams, searchParams } = HandleParams();
   return (
     <>
+      <Loading />
       <form action="" method="post" className="form-movies">
         <input
           type="text"

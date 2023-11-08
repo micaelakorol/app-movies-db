@@ -21,7 +21,7 @@ nav a {
 }
 
 nav a:hover {
-  color: salmon;
+  color: var(--description);
   transition: all 1s;
 }
 
