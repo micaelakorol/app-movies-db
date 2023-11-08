@@ -11,4 +11,3 @@ https://www.themoviedb.org/
 Deploy: 
 https://app-movies-db.netlify.app/
 
-(En proceso de refactorización, pendiente: Login de usuarios)
